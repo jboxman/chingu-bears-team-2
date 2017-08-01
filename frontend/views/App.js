@@ -23,9 +23,6 @@ class App extends React.Component {
       <Menu.Item>
       <Button as={Link} to='/mockinput'>MockOptions</Button>
       </Menu.Item>
-      <Menu.Item>
-      <Button as={Link} to='/browser-geo'>browser geo</Button>
-      </Menu.Item>
        <Menu.Item position='right'>
        <Search icon='search' placeholder='we need a search'/>
       </Menu.Item>
