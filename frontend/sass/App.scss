@@ -1,0 +1,89 @@
+//user profile
+#mock-card {
+    width: 40vw;
+    min-height: 85vh;
+    margin-left: 1vw;
+    #mock-card-cover {
+        width: 40vw;
+        height: 25vh;
+        background-image: url("http://placehold.it/500x200");
+        background-size: 40vw 25vh;
+        background-repeat: no-repeat;
+        
+        img{
+            border: 1px solid;
+            height: 15vh;
+            width: 15vh;
+            position: relative;
+            top: 65%;
+            left: 40%;
+        }
+    }
+    .content {
+        border-top: none!important;
+        .header {
+            margin-top: 5vh;
+            text-align: center;
+        }
+        .description {
+            margin: 5%;
+            text-align: justify;
+            border: 1px solid;
+            background: #eeeeee;
+            padding: 5px;
+        }
+        
+    }
+}
+//displays sub skills
+.skill-modal {
+    .progress {
+        width: 75%;
+        height: 10vh;
+        .bar {
+            height: 100%;
+        }
+    }
+}
+//tags at bottom of profile
+.mock-tags-wrapper {
+    
+    .mock-tags {
+            margin-top: 5vh;
+            .label{
+                margin: 1vh .5vw;
+            }
+        }
+    #mock-tag-edit {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-around;
+        input {
+            width: 25vw;
+        }
+    }
+}
+
+#mock-inputs-wrap {
+    .mock-inputs-header {
+        font-size: 3rem;
+        margin: 5vh auto 5vh;
+    }
+    #mock-photo-uploads {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+//star ratings
+#mock-skill-msg {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+#ratings-wrapper {
+    span {
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
