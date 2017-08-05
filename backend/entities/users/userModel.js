@@ -75,7 +75,7 @@ const userSchema = mongoose.Schema({
     required: false
   },
   skills: {
-    type: [userSkillsSchema]
+    type: [userSkillSchema]
   }
 },
 {
