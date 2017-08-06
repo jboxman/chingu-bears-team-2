@@ -1,0 +1,24 @@
+//user inputs
+#mock-inputs-wrap {
+    .mock-inputs-header {
+        font-size: 3rem;
+        margin: 5vh auto 5vh;
+    }
+    #mock-photo-uploads {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+//star ratings
+#mock-skill-msg {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+#ratings-wrapper {
+    span {
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}

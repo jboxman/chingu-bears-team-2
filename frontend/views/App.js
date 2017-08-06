@@ -15,7 +15,7 @@ class App extends React.Component {
       <Icon name='slack'/>
       </Menu.Item>
       <Menu.Item>
-      <Button as={IndexLink} to='/'>Home</Button>
+      <Button as={IndexLink} to='/'>Login</Button>
       </Menu.Item>
       <Menu.Item>
       <Button as={Link} to='/mockup'>MockProfile</Button>

@@ -54,19 +54,19 @@ export default class MockInputs extends Component {
      
     }
     
-    componentWillMount(){
-        this.geoInit()
-    }
+   
     
      geoInit(){
-          let lat;
+         let lat;
          let lon;
          let reverse;
           function reverseGeo(){
      window.fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=AIzaSyBLlSizwtPwzALlGiLL-f5JhCLCTC8ZqUA`)
 .then( res => res.json() )
 .then( data => reverse=data)
+.then( data => console.log(data))
 .then( data => this.setState({
+    
     city: reverse.results[1].formatted_address
 }))
  }
@@ -121,6 +121,9 @@ export default class MockInputs extends Component {
     let file = document.getElementById('cover-photo').files[0].name
     console.log(file)
   }
+  // componentWillMount(){
+   //     this.geoInit()
+  //  }
     render(){
         return(
     <div id='mock-inputs-wrap'>
@@ -134,7 +137,7 @@ export default class MockInputs extends Component {
             <Heading username={this.state.data.username}/>
             <WelcomeMessage/>
             
-            <Form id='mock-input-form' loading={this.state.loading}>
+            <Form id='mock-input-form'>
               <Header as='h3'>Biographical Information</Header>
               <Form.Group widths='equal'>
                 <Form.Input label='First name' placeholder='First name' onChange={this.handleChange.bind(this,'firstname')} value={this.state.form.firstname} />
@@ -163,7 +166,9 @@ export default class MockInputs extends Component {
                 <Form.Input label='City' width={8} value={this.state.city} readOnly={this.state.city.length>0}/>
                 <Form.Input label='Latitude' width={4} value={this.state.geo.lat} readOnly={this.state.geo.lat.length>0}/>
                 <Form.Input label='Longitude' width={4} value={this.state.geo.lon} readOnly={this.state.geo.lon.length>0}/>
+                
               </Form.Group>
+              <Button onClick={this.geoInit}>GPS: Push to allow Geolocation</Button>
               </Form>
               
           

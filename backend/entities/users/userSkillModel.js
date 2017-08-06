@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // This lives inside User. Mongoose refers to it as an embedded collection
-const userSkillsSchema = mongoose.Schema({
+const userSkillSchema = mongoose.Schema({
   // This will be an instance of the Skill model for the given ObjectId,
   // referenced as aUser.skill.name and aUser.skill.domain
   skill: {
